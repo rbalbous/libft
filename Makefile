@@ -6,7 +6,7 @@
 #    By: rbalbous <rbalbous@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/21 17:34:45 by rbalbous          #+#    #+#              #
-#    Updated: 2018/01/24 16:53:27 by rbalbous         ###   ########.fr        #
+#    Updated: 2018/01/24 17:51:36 by rbalbous         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,6 +25,7 @@ include basic/libft.mk
 all : $(NAME)
 
 $(NAME) :	$(OBJ)
+			mkdir $(OBJ_PATH) 2> /dev/null || true
 			ar rc $(NAME) $^
 			ranlib $(NAME)
 			
