@@ -6,7 +6,11 @@
 /*   By: rbalbous <rbalbous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/30 12:44:11 by rbalbous          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2018/03/05 14:28:36 by rbalbous         ###   ########.fr       */
+=======
+/*   Updated: 2018/01/19 15:34:49 by rbalbous         ###   ########.fr       */
+>>>>>>> refs/remotes/origin/master
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +27,13 @@ int		pf_va_inc(t_var *var, va_list temp, int *doll, int len)
 			va_arg(temp, long);
 		else if (doll[len] == 'L')
 			va_arg(temp, long long);
+<<<<<<< HEAD
 		else if (doll[len] == 'f')
 			va_arg(temp, double);
 		else if (doll[len] == 'F')
 			va_arg(temp, long double);
+=======
+>>>>>>> refs/remotes/origin/master
 		else if (doll[len] == 'n')
 			va_arg(temp, int);
 		len--;
@@ -43,11 +50,14 @@ int		pf_initlar(int (*lar[256])(), t_var *var)
 	lar['h'] = pf_dol_h;
 	lar['l'] = pf_dol_l;
 	lar['s'] = pf_dol_s;
+<<<<<<< HEAD
 	lar['f'] = pf_dol_f;
 	lar['g'] = pf_dol_f;
 	lar['e'] = pf_dol_f;
 	lar['a'] = pf_dol_f;
 	lar['w'] = pf_dol_s;
+=======
+>>>>>>> refs/remotes/origin/master
 	var->index = 1;
 	return (0);
 }

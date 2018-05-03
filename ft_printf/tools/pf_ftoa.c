@@ -6,32 +6,49 @@
 /*   By: rbalbous <rbalbous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/19 22:08:43 by rbalbous          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2018/03/03 18:51:36 by rbalbous         ###   ########.fr       */
+=======
+/*   Updated: 2018/01/16 19:22:30 by rbalbous         ###   ########.fr       */
+>>>>>>> refs/remotes/origin/master
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
+<<<<<<< HEAD
 void	pf_ftoa(long double n, t_flags *flags, t_var *var)
 {
 	char	str[25];
 	int		i;
 	int		count;
+=======
+void	pf_ftoa(double n, t_flags *flags, t_var *var)
+{
+	char	str[25];
+	int		i;
+>>>>>>> refs/remotes/origin/master
 
 	i = 1;
 	pf_itoa((intmax_t)(n * (2 * (n < 0) - 1)), flags, var);
 	if (flags->dpt == 0)
 		flags->dpt = '.';
+<<<<<<< HEAD
 	str[0] = flags->dpt;
 	count = flags->precision + 2 +
 	flags->hashtag * (!flags->precision);
 	while (i < count)
+=======
+	str[0] = flags->dpt * (flags->precision > 0);
+	while (i < flags->precision + 2)
+>>>>>>> refs/remotes/origin/master
 	{
 		n = (n - (intmax_t)n) * 10 * (-2 * (n < 0) + 1);
 		str[i] = (intmax_t)n + '0';
 		i++;
 	}
 	str[i] = 0;
+<<<<<<< HEAD
 	addnstr(str, count, var);
 }
 
@@ -77,4 +94,7 @@ int		pf_itostr(char *str, t_flags *flags, intmax_t n)
 		n /= 10;
 	}
 	return (tmp + 1);
+=======
+	addnstr(str, flags->precision + 2, var);
+>>>>>>> refs/remotes/origin/master
 }

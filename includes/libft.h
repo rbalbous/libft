@@ -6,7 +6,11 @@
 /*   By: rbalbous <rbalbous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/29 16:48:47 by home              #+#    #+#             */
+<<<<<<< HEAD:includes/libft.h
 /*   Updated: 2018/03/19 00:22:45 by rbalbous         ###   ########.fr       */
+=======
+/*   Updated: 2018/01/09 18:58:57 by rbalbous         ###   ########.fr       */
+>>>>>>> refs/remotes/origin/master:includes/libft.h
 /*                                                                            */
 /* ************************************************************************** */
 

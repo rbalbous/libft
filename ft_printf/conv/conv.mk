@@ -6,7 +6,7 @@
 #    By: rbalbous <rbalbous@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/15 21:09:17 by rbalbous          #+#    #+#              #
-#    Updated: 2018/04/05 14:22:21 by rbalbous         ###   ########.fr        #
+#    Updated: 2018/04/05 16:12:13 by rbalbous         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -163,7 +163,7 @@ $(OBJ_PATH)/%.o : $(FPATH)/%.c $(INCLUDES)/ft_printf.h
 $(OBJ_PATH)/%.o : $(NPATH)/%.c $(INCLUDES)/ft_printf.h
 	@$(CC) -o $@ -c $< -I $(INCLUDES) $(CFLAGS)
 
-$(OBJ_PATH)/%.o : $(EPATH)/%.c $(INCLUDES)/ft_printf.h
+$(OBJ_PATH)/%.o: $(EPATH)/%.c $(INCLUDES)/ft_printf.h
 	@$(CC) -o $@ -c $< -I $(INCLUDES) $(CFLAGS)
 
 $(OBJ_PATH)/%.o : $(GPATH)/%.c $(INCLUDES)/ft_printf.h
