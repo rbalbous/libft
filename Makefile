@@ -6,13 +6,13 @@
 #    By: rbalbous <rbalbous@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/21 17:34:45 by rbalbous          #+#    #+#              #
-#    Updated: 2018/04/05 16:10:03 by rbalbous         ###   ########.fr        #
+#    Updated: 2018/05/03 13:09:56 by rbalbous         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -g
+CFLAGS = -Wall -Wextra -Werror -Ofast
 
 INCLUDES = includes
 OBJ_PATH = obj
@@ -25,19 +25,19 @@ include basic/libft.mk
 all : $(NAME)
 
 $(NAME) :	$(OBJ)
-			@mkdir -p $(OBJ_PATH)
-			@ar rc $(NAME) $^
-			@ranlib $(NAME)
+			mkdir -p $(OBJ_PATH)
+			ar rc $(NAME) $^
+			ranlib $(NAME)
 			@echo "\033[33mlib done\033[m"
 			
 clean :
-			@rm -f $(OBJ)
+			rm -f $(OBJ)
 
 fclean : 	clean
-			@rm -f $(NAME)
+			rm -f $(NAME)
 		
 re :
-	@make fclean
-	@make all
+	make fclean
+	make all
 
 .PHONY: all clean fclean re

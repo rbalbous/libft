@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_fd.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbalbous <rbalbous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/16 15:08:32 by rbalbous          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2018/03/19 14:53:58 by rbalbous         ###   ########.fr       */
-=======
-/*   Updated: 2018/01/24 17:29:21 by rbalbous         ###   ########.fr       */
->>>>>>> refs/remotes/origin/master
+/*   Updated: 2018/05/02 12:07:57 by rbalbous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int		getendline(char *store, char **line, char *tmp)
+int		getendline(char *store, char **line, char *tmp)
 {
 	if ((*line = ft_strsub(store, 0, tmp - store)) == NULL)
 		return (-1);
@@ -24,7 +20,7 @@ static int		getendline(char *store, char **line, char *tmp)
 	return (1);
 }
 
-static int		last_lines(char **store, char **line)
+int		last_lines(char **store, char **line)
 {
 	if ((*line = ft_strsub(*store, 0, ft_strlen(*store))) == 0)
 		return (-1);

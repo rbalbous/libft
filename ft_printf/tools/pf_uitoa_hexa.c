@@ -6,11 +6,7 @@
 /*   By: rbalbous <rbalbous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/11 20:40:24 by rbalbous          #+#    #+#             */
-<<<<<<< HEAD
 /*   Updated: 2018/03/04 00:39:33 by rbalbous         ###   ########.fr       */
-=======
-/*   Updated: 2018/01/17 18:30:20 by rbalbous         ###   ########.fr       */
->>>>>>> refs/remotes/origin/master
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,15 +35,9 @@ void	pf_initoa(char modu[16])
 int		pf_uitoa_hexa(uintmax_t n, t_flags *flags, t_var *var)
 {
 	char			*str;
-<<<<<<< HEAD
 	static char		modu[16];
 	int				flag;
 	int				len;
-=======
-	uintmax_t		tn;
-	static char		modu[16];
-	int				flag;
->>>>>>> refs/remotes/origin/master
 
 	if (!modu[0])
 		pf_initoa(modu);
@@ -58,7 +48,6 @@ int		pf_uitoa_hexa(uintmax_t n, t_flags *flags, t_var *var)
 	}
 	if ((str = ft_strnew(flags->len)) == NULL)
 		return (-1);
-<<<<<<< HEAD
 	len = flags->len;
 	while (flags->len-- > 0)
 	{
@@ -67,16 +56,6 @@ int		pf_uitoa_hexa(uintmax_t n, t_flags *flags, t_var *var)
 		n /= 16;
 	}
 	addnstr(str, len, var);
-=======
-	tn = n;
-	while (flags->len-- > 0)
-	{
-		flag = flags->capx * ((tn & 15) > 9);
-		str[flags->len] = modu[tn & 15] - flag * 32;
-		tn /= 16;
-	}
-	addstr(str, var);
->>>>>>> refs/remotes/origin/master
 	free(str);
 	return (0);
 }

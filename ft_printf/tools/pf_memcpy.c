@@ -6,11 +6,7 @@
 /*   By: rbalbous <rbalbous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/18 22:42:24 by rbalbous          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2018/03/04 16:08:40 by rbalbous         ###   ########.fr       */
-=======
-/*   Updated: 2017/12/18 22:49:22 by rbalbous         ###   ########.fr       */
->>>>>>> refs/remotes/origin/master
+/*   Updated: 2018/05/03 12:10:08 by rbalbous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,35 +14,22 @@
 
 int		pf_memcpy(void *dest, const void *src, int n)
 {
-	char	*dd;
-	char	*ss;
 	int		i;
-<<<<<<< HEAD
-	int		index;
 
-	i = 0;
-	index = 0;
-	dd = (char*)dest;
-	ss = (char*)src;
-	while (dd[index])
-		index++;
-	while (i < n)
+	i = n;
+	while (i >= 8)
 	{
-		dd[index + i] = ss[i];
-		i++;
+		*((uintmax_t *)dest) = *((uintmax_t *)src);
+		dest = (void *)((uintmax_t *)dest + 1);
+		src = (void *)((uintmax_t *)src + 1);
+		i -= 8;
 	}
-	dd[n + index] = 0;
-=======
-
-	i = 0;
-	dd = (char*)dest;
-	ss = (char*)src;
-	while (i < n)
+	while (i-- > 0)
 	{
-		dd[i] = ss[i];
-		i++;
+		*((unsigned char *)dest) = *((unsigned char *)src);
+		dest = (void *)((unsigned char *)dest + 1);
+		src = (void *)((unsigned char *)src + 1);
 	}
-	dd[n] = 0;
->>>>>>> refs/remotes/origin/master
+	*((char*)dest) = 0;
 	return (n);
 }

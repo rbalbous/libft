@@ -6,11 +6,7 @@
 /*   By: rbalbous <rbalbous@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/11 19:34:08 by rbalbous          #+#    #+#             */
-<<<<<<< HEAD
 /*   Updated: 2018/03/04 18:13:38 by rbalbous         ###   ########.fr       */
-=======
-/*   Updated: 2018/01/14 21:44:03 by rbalbous         ###   ########.fr       */
->>>>>>> refs/remotes/origin/master
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +50,6 @@ int		pf_none(t_flags *flags, t_var *var, t_uint8 *str)
 		return (-1);
 	return (0);
 }
-<<<<<<< HEAD
 
 int		pf_dol_f(t_flags *flags, t_var *var, t_uint8 *str)
 {
@@ -63,5 +58,3 @@ int		pf_dol_f(t_flags *flags, t_var *var, t_uint8 *str)
 		return ('F');
 	return ('f');
 }
-=======
->>>>>>> refs/remotes/origin/master
